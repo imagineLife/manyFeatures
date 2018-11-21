@@ -9,8 +9,7 @@ class MyReader extends Component {
       delay: 300,
       result: "No QR result yet...",
       qrStyle : {
-        width: '400px',
-        height: '250px',
+        width: '250px',
         display:'inline-block'
 
       }
