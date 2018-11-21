@@ -41,9 +41,11 @@ class MyReader extends Component {
                 onScan={this.handleScan}
                 style={this.state.qrStyle}
               />
-              <p>{this.state.result}</p>
-              <p>latitude: {this.props.coords.latitude}</p>
-              <p>longitude: {this.props.coords.longitude}</p>
+              <div className="locationStats">
+                <p>{this.state.result}</p>
+                <p>latitude: {this.props.coords.latitude}</p>
+                <p>longitude: {this.props.coords.longitude}</p>
+              </div>
             </div>
           : <div>Getting the location data&hellip; </div>
     )
