@@ -34,7 +34,7 @@ class MyReader extends Component {
       : !this.props.isGeolocationEnabled
         ? <div>Geolocation is not enabled</div>
         : this.props.coords
-          ? <div className'qrWrapper'>
+          ? <div className='qrWrapper'>
               <QrReader
                 delay={this.state.delay}
                 onError={this.handleError}
