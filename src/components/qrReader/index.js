@@ -34,19 +34,21 @@ class MyReader extends Component {
       : !this.props.isGeolocationEnabled
         ? <div>Geolocation is not enabled</div>
         : this.props.coords
-          ? <div className='qrWrapper'>
-              <QrReader
-                delay={this.state.delay}
-                onError={this.handleError}
-                onScan={this.handleScan}
-                style={this.state.qrStyle}
-              />
+          ? <React.Fragment>
+              <div className='qrWrapper'>
+                <QrReader
+                  delay={this.state.delay}
+                  onError={this.handleError}
+                  onScan={this.handleScan}
+                  style={this.state.qrStyle}
+                />
+              </div>
               <div className="locationStats">
                 <p>{this.state.result}</p>
                 <p>latitude: {this.props.coords.latitude}</p>
                 <p>longitude: {this.props.coords.longitude}</p>
               </div>
-            </div>
+            </React.Fragment>
           : <div>Getting the location data&hellip; </div>
     )
   }
