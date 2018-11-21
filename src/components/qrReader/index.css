@@ -5,3 +5,7 @@ body{
 .locationStats{
 	margin-top: 150px;
 }
+
+.qrWrapper{
+	height: 400px;
+}
